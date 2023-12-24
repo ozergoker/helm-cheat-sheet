@@ -1,5 +1,6 @@
 # Helm Cheat Sheet
 
+![image](https://github.com/ozergoker/helm-cheat-sheet/blob/main/helm.svg)
 
 # What is Helm?
 
