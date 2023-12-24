@@ -10,6 +10,7 @@ Charts are easy to create, version, share, and publish — so start using Helm a
 
 # Chart Management
 
+```
 helm create <name>                      # Creates a chart directory along with the common files and directories used in a chart.
 helm package <chart-path>               # Packages a chart into a versioned chart archive file.
 helm lint <chart>                       # Run tests to examine a chart and identify possible issues:
@@ -20,4 +21,5 @@ helm pull <chart> --untar=true          # If set to true, will untar the chart a
 helm pull <chart> --verify              # Verify the package before using it
 helm pull <chart> --version <number>    # Default-latest is used, specify a version constraint for the chart version to use
 helm dependency list <chart>            # Display a list of a chart’s dependencies:
+```
 
