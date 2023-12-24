@@ -23,3 +23,17 @@ helm pull <chart> --version <number>    # Default-latest is used, specify a vers
 helm dependency list <chart>            # Display a list of a chart’s dependencies:
 ```
 
+# Install and Uninstall Apps
+
+
+```
+helm install <name> <chart>                           # Install the chart with a name
+helm install <name> <chart> --namespace <namespace>   # Install the chart in a specific namespace
+helm install <name> <chart> --set key1=val1,key2=val2 # Set values on the command line (can specify multiple or separate values with commas)
+helm install <name> <chart> --values <yaml-file/url>  # Install the chart with your specified values
+helm install <name> <chart> --dry-run --debug         # Run a test installation to validate chart (p)
+helm install <name> <chart> --verify                  # Verify the package before using it 
+helm install <name> <chart> --dependency-update       # update dependencies if they are missing before installing the chart
+helm uninstall <name>                                 # Uninstall a release
+```
+
