@@ -1,1 +1,1 @@
-# helm-cheat-sheet
+# Helm Cheat Sheet
