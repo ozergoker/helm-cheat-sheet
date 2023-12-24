@@ -68,3 +68,38 @@ helm search hub <keyword>         # Search for charts in the Artifact Hub or you
 ```
 
 
+# Helm Release monitoring
+
+
+```
+helm list                       # Lists all of the releases for a specified namespace, uses current namespace context if namespace not specified
+helm list --all                 # Show all releases without any filter applied, can use -a
+helm list --all-namespaces      # List releases across all namespaces, we can use -A
+helm -l key1=value1,key2=value2 # Selector (label query) to filter on, supports '=', '==', and '!='
+helm list --date                # Sort by release date
+helm list --deployed            # Show deployed releases. If no other is specified, this will be automatically enabled
+helm list --pending             # Show pending releases
+helm list --failed              # Show failed releases
+helm list --uninstalled         # Show uninstalled releases (if 'helm uninstall --keep-history' was used)
+helm list --superseded          # Show superseded releases
+helm list -o yaml               # Prints the output in the specified format. Allowed values: table, json, yaml (default table)
+helm status <release>           # This command shows the status of a named release.
+helm status <release> --revision <number>   # if set, display the status of the named release with revision
+helm history <release>          # Historical revisions for a given release.
+helm env                        # Env prints out all the environment information in use by Helm.
+```
+
+
+# Download Release Information
+
+
+```
+helm get all <release>      # A human readable collection of information about the notes, hooks, supplied values, and generated manifest file of the given release.
+helm get hooks <release>    # This command downloads hooks for a given release. Hooks are formatted in YAML and separated by the YAML '---\n' separator.
+helm get manifest <release> # A manifest is a YAML-encoded representation of the Kubernetes resources that were generated from this release's chart(s). If a chart is dependent on other charts, those resources will also be included in the manifest.
+helm get notes <release>    # Shows notes provided by the chart of a named release.
+helm get values <release>   # Downloads a values file for a given release. use -o to format output
+```
+
+
+
