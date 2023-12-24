@@ -51,3 +51,20 @@ helm upgrade <release> <chart> --force                    # Force resource updat
 helm rollback <release> <revision>                        # Roll back a release to a specific revision
 helm rollback <release> <revision>  --cleanup-on-fail     # Allow deletion of new resources created in this rollback when rollback fails
 ```
+
+
+# List, Add, Remove, and Update Repositories
+
+
+```
+helm repo add <repo-name> <url>   # Add a repository from the internet:
+helm repo list                    # List added chart repositories
+helm repo update                  # Update information of available charts locally from chart repositories
+helm repo remove <repo_name>      # Remove one or more chart repositories
+helm repo index <DIR>             # Read the current directory and generate an index file based on the charts found.
+helm repo index <DIR> --merge     # Merge the generated index with an existing index file
+helm search repo <keyword>        # Search repositories for a keyword in charts
+helm search hub <keyword>         # Search for charts in the Artifact Hub or your own hub instance
+```
+
+
